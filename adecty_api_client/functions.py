@@ -1,5 +1,5 @@
 #
-# (c) 2022, Yegor Yakubovich
+# (c) 2023, Yegor Yakubovich
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ from requests import get
 
 from adecty_api_client.adecty_api_client_error import AdectyApiClientError
 
-DOMAIN = 'http://api.adecty.com/'
+DOMAIN = 'https://api.adecty.com/'
 
 
 def request_create(endpoint: str, data: dict):

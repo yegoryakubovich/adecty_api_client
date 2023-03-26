@@ -1,5 +1,5 @@
 #
-# (c) 2022, Yegor Yakubovich
+# (c) 2023, Yegor Yakubovich
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,4 +19,9 @@ from adecty_api_client.account import Account
 
 
 class AdectyApiClient:
-    account = Account()
+    account_session_token: str
+    account: Account
+
+    def __init__(self, account_session_token: str = None):
+        self.account_session_token = account_session_token
+        self.account = Account(account_session_token=account_session_token)
