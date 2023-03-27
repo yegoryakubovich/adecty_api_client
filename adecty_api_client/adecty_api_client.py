@@ -16,12 +16,15 @@
 
 
 from adecty_api_client.account import Account
+from adecty_api_client.pay import Pay
 
 
 class AdectyApiClient:
     account_session_token: str
     account: Account
+    pay: Pay
 
     def __init__(self, account_session_token: str = None):
         self.account_session_token = account_session_token
         self.account = Account(account_session_token=account_session_token)
+        self.pay = Pay(account_session_token=account_session_token)
